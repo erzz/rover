@@ -39,6 +39,7 @@ RUN chmod +x /bin/rover
 # Install Google Chrome
 RUN apk add chromium
 
+RUN git config --global --add safe.directory /src/.terraform/modules/lb-http
 WORKDIR /src
 
 ENTRYPOINT [ "/bin/rover" ]
